@@ -32,3 +32,4 @@ Two cudaMemcpy calls
 Full spike history and energy calculations
 Logging to console
 
+*FOR RUN SCRIPTING:* for i in {1..3}; do sudo nsys profile -o simO$i-JETSON-nNeuron-x000 --trace osrt,cuda --gpuctxsw true --gpu-metrics-devices all -s process-tree --sampling-period 375000 --export json ./simO$i; done
